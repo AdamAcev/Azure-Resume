@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Adam's Azure Resume
 
 This is my Cloud Resume Challenge built on Azure. It's a static website hosted on Azure Storage, with a visitor counter built on Azure Functions. The website is built with HTML, CSS, and JavaScript. The visitor counter is built with .NET and Azure Functions. 
@@ -73,6 +72,3 @@ The back-end is an [HTTP triggered Azure Functions](https://docs.microsoft.com/e
 - Implement tests into CICD.
 - Create IaC files.
 - Improve tests and tests documentation.
-=======
-# Azure-Resume
->>>>>>> ac147b147a28b706c72f741f8d3260b8f7819309
