@@ -1,12 +1,22 @@
 {
+    
     "version": "2.0",
-    "logging": {
-        "applicationInsights": {
-            "samplingSettings": {
+    "extensions": {
+        "cosmosDB": {
+            "connectionMode": "Gateway"},
+        "http": {
+            "routePrefix": "api",
+            "maxOutstandingRequests": 200,
+            "maxConcurrentRequests": 100,
+            "dynamicThrottlesEnabled": true,
+            "hsts": {
                 "isEnabled": true,
-                "excludedTypes": "Request"
+                "maxAge": "10"
             },
-            "enableLiveMetricsFilters": true
+            "customHeaders": {
+                "X-Content-Type-Options": "nosniff"
+            }
         }
     }
+
 }
