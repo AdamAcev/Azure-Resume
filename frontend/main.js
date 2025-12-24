@@ -1,22 +1,24 @@
-window.addEventListener('DOMContentLoaded', (event) =>{
-    getVisitCount();
-})
+window.addEventListener('DOMContentLoaded', () => {
+  getVisitCount();
+});
 
-const functionApi = '';
-
-const productionApiUrl = 'https://azureresumevisitorcounter.azurewebsites.net/api/GetVisitorCounter?';
+const productionApiUrl = 'https://azureresumevisitorcounter.azurewebsites.net/api/GetVisitorCounter';
 const localApiUrl = 'http://localhost:7071/api/GetVisitorCounter';
 
 const getVisitCount = () => {
-    let count = 30;
-    fetch(productionApiUrl).then(response => {
-        return response.json()
-    }).then(response =>{
-        console.log("Website called function API.");
-        count =  response.count;
-        document.getElementById("counter").innerText = count;
-    }).catch(function(error){
-        console.log(error);
+  const isLocal =
+    window.location.hostname === 'localhost' ||
+    window.location.hostname === '127.0.0.1';
+
+  const apiUrl = isLocal ? localApiUrl : productionApiUrl;
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((response) => {
+      console.log('Website called function API.');
+      document.getElementById('counter').innerText = response.count;
+    })
+    .catch((error) => {
+      console.log(error);
     });
-    return count;
-}
+};

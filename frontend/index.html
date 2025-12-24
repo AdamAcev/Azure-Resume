@@ -25,7 +25,6 @@
    <!-- Script
    ================================================== -->
    <script src="js/modernizr.js"></script>
-   <script src="main.js"></script>
 
    <!-- Favicons
 	================================================== -->
@@ -44,25 +43,35 @@
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-         </ul> <!-- end #nav -->
-
+      <ul id="nav" class="nav">
+  <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
+  <li><a class="smoothscroll" href="#about">About</a></li>
+  <li><a class="smoothscroll" href="#resume">Resume</a></li>
+  <li><a class="smoothscroll" href="#projects">Projects</a></li>
+</ul>
       </nav> <!-- end #nav-wrap -->
 
       <div class="row banner">
          <div class="banner-text">
-            <h1 class="responsive-headline">Hi, I'm Adam</h1>
-            
-            <p>and this page has been viewed <a id="counter"></a> times :) </p> 
-            <ul class="social">
-               <li><a href="https://www.linkedin.com/in/adam-acevedo-858b46120/"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="https://instagram.com/adamacev"><i class="fa fa-instagram"></i></a></li>
-               <li><a href="https://github.com/adamacev"><i class="fa fa-github"></i></a></li>
-            </ul>
-         </div>
+  <h1 class="responsive-headline">Hi, I'm Adam</h1>
+
+  <h3>
+    Cloud · Platform · Security Engineer<br>
+    Azure Architect | Linux | DevOps | Zero Trust
+  </h3>
+
+  <p>
+    This page has been viewed <strong><span id="counter">loading…</span></strong> times
+
+  </p>
+
+  <ul class="social">
+    <li><a href="https://www.linkedin.com/in/adam-acevedo-858b46120/"><i class="fa fa-linkedin"></i></a></li>
+    <li><a href="https://instagram.com/adamacev"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://github.com/adamacev"><i class="fa fa-github"></i></a></li>
+  </ul>
+</div>
+
       </div>
 
       <p class="scrolldown">
@@ -88,12 +97,11 @@
 
             <h2>ABOUT ME</h2>
 
-            <p> Hi, I'm Adam Acevedo, <span>Certified Azure Cloud System Administration Associate 
+            <p> Hi, I'm Adam Acevedo, <span>Certified Azure Cloud System Administration  
             Focused on engineering cloud environments to increase business productivity and efficiency
                
          </br>
       </br>
-       I built this page as part of the <span><a href="https://github.com/madebygps/azure-resume">Cloud Guru Azure Resume Challenge.</a></span>
             
 
          </div> <!-- end .main-col -->
@@ -105,103 +113,197 @@
 
    <!-- Resume Section
    ================================================== -->
-   <section id="resume">
+  <section id="resume">
 
-      <!-- Education
-      ----------------------------------------------- -->
-      <div class="row education">
+  <!-- Core Skills
+  ----------------------------------------------- -->
+  <div class="row education">
 
-         <div class="three columns header-col">
-            <h1><span>Certifications</span></h1>
-         </div>
+    <div class="three columns header-col">
+      <h1><span>Core Skills</span></h1>
+    </div>
 
-         <div class="nine columns main-col">
+    <div class="nine columns main-col">
 
-            <div class="row item">
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Cloud & Architecture</h3>
+          <p>
+            Microsoft Azure (App Service, Functions, Storage, Networking, Identity, Governance),
+            Azure Well-Architected Framework, BCDR (RPO/RTO), hybrid and cloud migration strategies.
+          </p>
+        </div>
+      </div>
 
-               <div class="twelve columns">
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Security & Identity</h3>
+          <p>
+            Zero Trust, IAM/RBAC, Microsoft Entra ID (Conditional Access, Managed Identities),
+            HTTP security headers (CSP, HSTS, X-Frame-Options), OAuth/OpenID Connect concepts.
+          </p>
+        </div>
+      </div>
 
-                  <h3>Azure Certified System Administrator Associate</h3>
-                  <p class="info"><em class="date">March 2024</em></p>
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Infrastructure & Platforms</h3>
+          <p>
+            Linux (RHEL, CentOS, Rocky), Azure Virtual Machines, networking and load balancing,
+            Cloudflare (WAF, Zero Trust, DNS, Workers, Tunnels), network segmentation, firewall/WAF rule management.
+          </p>
+        </div>
+      </div>
 
-               </div>
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>DevOps & Automation</h3>
+          <p>
+            Terraform, GitHub Actions (CI/CD), Bash, PowerShell, Infrastructure as Code (IaC).
+          </p>
+        </div>
+      </div>
 
-            </div> <!-- item end -->
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Operations & Reliability</h3>
+          <p>
+            Azure Monitor, Log Analytics fundamentals, incident response support,
+            performance and high-availability/resiliency tuning.
+          </p>
+        </div>
+      </div>
 
-            <div class="row item">
+    </div> <!-- main-col end -->
 
-               <div class="twelve columns">
-
-                  <h3>Azure Fundamentals AZ900</h3>
-                  <p class="info"><em class="date">July 2022</em></p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>QLS Linux System Administration</h3>
-                  <p class="info"><em class="date">September 2023</em></p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3> Saint Joseph's University Bachelors of Science</h3>
-                  <p class="info"><em class="date">August 2012 to May 2016</em></p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Education -->
-
-
-      <!-- Work
-      ----------------------------------------------- -->
-      <div class="row work">
-
-         <div class="three columns header-col">
-            <h1><span>Work</span></h1>
-         </div>
-
-         <div class="nine columns main-col">
-
-            <div class="row item">
-
-               <div class="twelve columns">
-
-                  <h3>Creative Testing Solutions</h3>
-                  <p class="info">Testing Technologist<span>&bull;</span> <em class="date">November 2022 - Current </em></p>
-                  
-                  <h3>MLee Healthcare Staffing & Recruiting</h3>
-                  <p class="info">System Administrator<span>&bull;</span> <em class="date">April 2024 </em></p>
-
-                  <h3>New Dawn Rejuvenation</h3>
-                  <p class="info">Business Owner<span>&bull;</span> <em class="date">August 2019 - May 2024 </em></p>
-
-               </div>
-
-            </div> <!-- item end -->
-
-         </div> <!-- main-col end -->
-
-      </div> <!-- End Work -->
+  </div> <!-- End Core Skills -->
 
 
-      
+  <!-- Certifications
+  ----------------------------------------------- -->
+  <div class="row education">
 
-   </section> <!-- Resume Section End-->
+    <div class="three columns header-col">
+      <h1><span>Certifications</span></h1>
+    </div>
 
+    <div class="nine columns main-col">
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Microsoft</h3>
+          <p class="info">
+            Azure Solutions Architect Expert (AZ-305) <span>&bull;</span>
+            Azure Administrator Associate (AZ-104) <span>&bull;</span>
+            Azure Fundamentals (AZ-900) <span>&bull;</span>
+            Power Platform Fundamentals (PL-900)
+          </p>
+        </div>
+      </div>
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>ISC2</h3>
+          <p class="info">Cybersecurity Certified (CC)</p>
+        </div>
+      </div>
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Additional Training</h3>
+          <p class="info">
+            EdX/IBM: Operating Systems & Security, CyberSecurity Fundamentals, Bash Scripting <span>&bull;</span>
+            UT Austin: AI Prompt Engineering
+          </p>
+        </div>
+      </div>
+
+    </div> <!-- main-col end -->
+
+  </div> <!-- End Certifications -->
+
+<a id="projects"></a>
+  <!-- Projects
+  ----------------------------------------------- -->
+  <div class="row work">
+
+    <div class="three columns header-col">
+      <h1><span>Projects</span></h1>
+    </div>
+
+    <div class="nine columns main-col">
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Cloudflare Web Application Security Architecture</h3>
+          <p class="info">Cloudflare WAF <span>&bull;</span> Zero Trust <span>&bull;</span> Azure-hosted workloads</p>
+          <ul>
+            <li>Designed and implemented a Cloudflare-fronted security architecture using WAF, Zero Trust access, and hardened HTTP headers.</li>
+            <li>Configured strict CSP, HSTS, and response headers to reduce XSS/clickjacking/injection exposure for a public-facing web app.</li>
+            <li>Developed Workers-based logic to distinguish browser vs CLI traffic patterns and apply conditional controls.</li>
+            <li>Documented architecture decisions and tradeoffs across DNS, network, identity, and application layers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Azure Resume / Serverless Platform Project</h3>
+          <p class="info">Azure Functions (.NET) <span>&bull;</span> Cosmos DB <span>&bull;</span> GitHub Actions</p>
+          <ul>
+            <li>Built a serverless architecture with an HTTP-triggered Azure Function connected to Cosmos DB to track and display website visitor counts.</li>
+            <li>Automated deployments with GitHub Actions and environment-specific pipelines.</li>
+            <li>Applied least-privilege access patterns and secure configuration practices for cloud-hosted components.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div> <!-- main-col end -->
+
+  </div> <!-- End Projects -->
+
+
+  <!-- Professional Experience
+  ----------------------------------------------- -->
+  <div class="row work">
+
+    <div class="three columns header-col">
+      <h1><span>Experience</span></h1>
+    </div>
+
+    <div class="nine columns main-col">
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>Quest Logic Solutions</h3>
+          <p class="info">Junior Systems Administrator (Cloud/Azure focus) <span>&bull;</span> <em class="date">May 2021 – March 2025</em></p>
+          <ul>
+            <li>Interpreted customer business/technical requirements to shape cloud architecture proposals and modernization plans.</li>
+            <li>Delivered demos and walkthroughs for Azure migrations, identity governance, and automation.</li>
+            <li>Designed proofs-of-concept for Azure workloads and automation pipelines; supported production Azure and Linux environments.</li>
+            <li>Administered Linux/Windows infrastructure and Azure IaaS/PaaS (VMs, networking, NSGs, load balancing, storage, identity).</li>
+            <li>Automated provisioning/configuration using Ansible and PowerShell; enhanced security posture with Entra ID, MFA, Conditional Access, and PIM.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row item">
+        <div class="twelve columns">
+          <h3>McDNS</h3>
+          <p class="info">Intern Systems Administrator <span>&bull;</span> <em class="date">Oct 2019 – Apr 2021</em></p>
+          <ul>
+            <li>Supported engineers with technical artifacts for solution pitches and customer meetings.</li>
+            <li>Assisted with Azure infrastructure, identity integrations, and Microsoft 365 services.</li>
+            <li>Conducted security assessments with Azure Policy and Security Center; contributed to automation and infrastructure standardization.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div> <!-- main-col end -->
+
+  </div> <!-- End Professional Experience -->
+
+</section>
 
    <!-- footer
    ================================================== -->
@@ -241,6 +343,9 @@
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
+
+   <!-- Visitor Counter (load last) -->
+   <script defer src="main.js"></script>
 
 </body>
 
