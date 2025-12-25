@@ -7,13 +7,8 @@ Backend API:
 https://azureresume-func-25.azurewebsites.net/api/GetVisitorCounter
 
 🏗 Architecture Overview
-Browser (HTTPS)
-   ↓
-Azure Storage Static Website
-   ↓ (fetch)
-Azure Function App (HTTP Trigger, .NET Isolated)
-   ↓
-Azure Cosmos DB (SQL API)
+
+Browser (HTTPS) → Azure Storage Static Website → (fetch) Azure Function App (HTTP Trigger, .NET Isolated) → Azure Cosmos DB (SQL API)
 
 Components
 Layer	Service	Purpose
