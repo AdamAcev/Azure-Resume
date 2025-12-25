@@ -30,7 +30,7 @@ jobs:
             set -euo pipefail
 
             az storage blob upload-batch \
-              --account-name azureresumestorage \
+              --account-name azureresumestorage25 \
               --destination '$web' \
               --source frontend/ \
               --auth-mode login \
