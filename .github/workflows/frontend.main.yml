@@ -11,31 +11,43 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
     steps:
-      - uses: actions/checkout@v2
-      - name: login with azure
-        uses: azure/login@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login with Azure
+        uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Upload to blob storage
-        uses: azure/CLI@v1
+      - name: Upload to blob storage ($web)
+        uses: azure/CLI@v2
         with:
-          azcliversion: 2.30.0
           inlineScript: |
-              az storage blob upload-batch \
-                --account-name cloudresumesite \
-                -d '$web' \
-                -s frontend/ \
-                --auth-mode login
-      - name: Purge CDN endpoint
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.30.0
-          inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "CloudResumeChallengeGPS" --name "gpsazuresume" --resource-group "cloud-resume-challenge-rg"
+            set -euo pipefail
 
-      # Azure logout
-      - name: logout
-        run: |
-          az logout
+            az storage blob upload-batch \
+              --account-name cloudresumesite \
+              --destination '$web' \
+              --source frontend/ \
+              --auth-mode login \
+              --overwrite
+
+      - name: Purge CDN endpoint
+        uses: azure/CLI@v2
+        with:
+          inlineScript: |
+            set -euo pipefail
+
+            az cdn endpoint purge \
+              --content-paths "/*" \
+              --profile-name "CloudResumeChallengeGPS" \
+              --name "gpsazuresume" \
+              --resource-group "cloud-resume-challenge-rg"
+
+      - name: Logout
+        if: always()
+        run: az logout
