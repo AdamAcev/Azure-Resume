@@ -37,18 +37,6 @@ jobs:
               --auth-mode login \
               --overwrite
 
-      - name: Purge CDN endpoint
-        uses: azure/CLI@v2
-        with:
-          inlineScript: |
-            set -euo pipefail
-
-            az cdn endpoint purge \
-              --content-paths "/*" \
-              --profile-name "CloudResumeChallengeGPS" \
-              --name "gpsazuresume" \
-              --resource-group "cloud-resume-challenge-rg"
-
       - name: Logout
         if: always()
         run: az logout
